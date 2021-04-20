@@ -7,7 +7,4 @@ const graphqlServer = new ApolloServer({
     resolvers
 })
 
-const middleware = graphqlServer.getMiddleware()
-
-
 export default graphqlServer
