@@ -4,7 +4,8 @@ import resolvers from './resolvers'
 
 const graphqlServer = new ApolloServer({
     typeDefs,
-    resolvers
+    resolvers,
+
 })
 
 export default graphqlServer
