@@ -6,6 +6,13 @@ export default gql`
         id: ID!
     }
 
+    type PageInfo {
+        hasPreviousPage: Boolean
+        hasNextPage: Boolean
+        startCursor: String
+        endCursor: String
+    }
+
     type Query {
         node(id: ID) : Node
     }
