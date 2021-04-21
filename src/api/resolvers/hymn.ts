@@ -1,7 +1,13 @@
+import Hymn, { IHymn } from "../model/hymn"
+import { } from 'apollo-server-express'
+import { getDocuments } from '../db/db'
+import PaginationInfo from "../db/types/PaginationInfo"
+
+
 export default {
     Query: {
-        hymns: function hymns() {
-            return 'Hello from this hymns resolver'
+        hymns: async function hymns(parent: any, params: PaginationInfo, context: any) {
+            return await getDocuments<IHymn>(Hymn, params)
         }
     }
 }
